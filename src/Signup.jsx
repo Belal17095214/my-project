@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, Link, Navigate } from 'react-router-dom';
+import image from './assets/image.avif'
 
 // const main=async ()=>{
 //   let data=await dbConnect();
@@ -54,7 +55,7 @@ const Signup = () => {
         {/* LEFT SIDE: IMAGE */}
         <div className="hidden md:block relative">
           <img
-            src="./image.avif"
+           src={image}
             alt="Islamic Books"
             className="absolute inset-0 w-full h-full object-cover"
           />
