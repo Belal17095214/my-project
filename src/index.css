@@ -1,0 +1,81 @@
+
+@import "tailwindcss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@layer base {
+  body {
+    font-family: "Tinos", serif;
+  }
+}
+
+
+@layer components {
+  /* Base button style */
+  .button {
+    @apply bg-blue-600 rounded-md absolute top-0 left-0 p-2 m-4 text-white transition;
+  }
+
+  /* Variants */
+  .button:hover {
+    @apply bg-blue-800;
+  }
+
+  .button:focus {
+    @apply bg-yellow-400;
+  }
+
+  .button:active {
+    @apply bg-amber-700;
+  }
+}
+
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 60%;
+}
+
+.custom-prev { left: 10px; }
+.custom-next { right: 10px; }
+
+.zoom-container {
+  --x: 50%;
+  --y: 50%;
+}
+
+.zoom-container:hover .zoom-img {
+  transform: scale(2);
+}
+
+.zoom-img {
+  transform-origin: var(--x) var(--y);
+}
+
+/* Is class ko jis bhi div pe lagaoge uska scrollbar gayab ho jayega */
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Brave */
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.swiper-slide {
+  height: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%; /* Aap apni pasand ki height set karein */
+  object-fit: cover; /* Image ko crop karke fit karega, khinchega nahi */
+}
