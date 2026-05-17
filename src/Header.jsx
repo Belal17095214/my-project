@@ -249,9 +249,9 @@ function Header() {
                     {/* 1. Logo Section */}
                     <div className='flex items-center gap-2 shrink-0'>
                         <Link to="/" className="flex items-center gap-2">
-                            <span className="font-bold text-2xl tracking-tight text-white">
-                                Global<span className="text-indigo-400"> Store</span>
-                            </span>
+                            <div className="font-bold text-2xl tracking-tight text-white">
+  Global <span className="text-indigo-400">Deen</span> Store
+</div>
                         </Link>
                     </div>
 

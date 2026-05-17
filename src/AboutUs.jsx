@@ -1,5 +1,7 @@
 import React from 'react';
 import { BookOpen, Users, Award, ShieldCheck } from 'lucide-react'; // Icons ke liye
+import image from './assets/image.avif'
+
 
 
 const AboutUs = () => {
@@ -29,7 +31,7 @@ const AboutUs = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src='./image.avif'
+              src={image}
               alt="Islamic Library" 
               className="w-full h-full object-cover"
             />
